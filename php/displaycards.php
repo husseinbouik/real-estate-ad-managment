@@ -36,7 +36,7 @@ try {
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <a href="#" class="btn btn-outline-warning rounded-circle me-md-2" role="button" data-bs-toggle="modal" data-bs-target="#edit<?php echo $ad["ad_id"] ?>"><iconify-icon icon="material-symbols:edit-document-sharp"></iconify-icon></a>
           <a href="#" class="btn btn-outline-danger rounded-circle" data-bs-toggle='modal' data-bs-target="#deletee<?php echo $ad["ad_id"] ?>" role="button" value='<?php echo $ad['ad_id']; ?>'><iconify-icon icon="material-symbols:auto-delete"></iconify-icon></a>
-          <a href="#" class="btn btn-primary" role="button" href="details.php?ad_id=<?php echo $val['ad_id']; ?>">View Details</a>
+          <a href="#" class="btn btn-primary" role="button" href="details.php?ad_id=<?php echo $ad['ad_id']['ad_id']; ?>">View Details</a>
         </div>
       </div>
     </div>
