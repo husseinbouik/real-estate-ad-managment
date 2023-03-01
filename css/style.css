@@ -1,0 +1,10 @@
+.submit{
+  background-color: rgb(120, 155, 155) !important;
+  color: white !important;
+}
+.nav-link, .sign{
+  color: white !important;
+}
+#logo{
+  width: 8%;
+}

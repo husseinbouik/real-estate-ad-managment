@@ -1,0 +1,22 @@
+{
+  "name": "brief15_rent_buy_home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoufianTamim/BRIEF15_RENT_BUY_HOME.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoufianTamim/BRIEF15_RENT_BUY_HOME/issues"
+  },
+  "homepage": "https://github.com/SoufianTamim/BRIEF15_RENT_BUY_HOME#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
