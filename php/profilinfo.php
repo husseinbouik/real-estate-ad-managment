@@ -23,11 +23,11 @@ if ($stmt->rowCount() > 0) {
 
 ?>
   <!-- Display user's information using HTML code -->
-  <div class="profilinfo d-flex gap-5 " style="height: 320px; padding: 0%;">
-    <div class="rounded-circle bg-dark d-flex justify-content-center align-items-center" style="width: 300px; height: 300px;">
+  <div class="profilinfo d-flex gap-5 " style="height: 320px; padding: 0%; margin-top:89px;">
+    <div class="rounded-circle bg-dark d-flex justify-content-center align-items-center" style="width: 150px; height: 150px;margin-top:89px;margin-left:89px;">
       <span class="text-white display-1 font-weight-bold"><?php echo $initials; ?></span>
     </div>
-    <div class="userinfo bg-light p-4 rounded w-50 m-5">
+    <div class="userinfo bg-light p-4 rounded w-50 ">
       <p class="card-text">First name: <span class="fw-bold"><?php echo  $row["first_name"]; ?></span></p>
       <p class="card-text">Last name: <span class="fw-bold"><?php echo $row["last_name"]; ?></span></p>
       <p class="card-text">Phone number: <span class="fw-bold"><?php echo $row["phone_number"];; ?></span></p>

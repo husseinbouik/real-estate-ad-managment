@@ -10,7 +10,9 @@
   justify-content: center;
   align-items: center;
 }
-
+#nav {
+  background-color: #2d2d2d54;
+}
 .file-input input[type="file"] {
   position: absolute;
   top: 0;

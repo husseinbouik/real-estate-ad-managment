@@ -89,6 +89,6 @@ try {
 // close the prepared statement and database connection
 $stmt = null;
 $conn = null;
-// header("Location: profile.php");
+header("Location: profile.php");
 exit;
 ?>

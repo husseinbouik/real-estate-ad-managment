@@ -8,8 +8,8 @@ require('connect.php');
 
 
 if(isset($_SESSION["user_email"])){
-  echo $_SESSION["user_email"];
-  echo $_SESSION['user_id'];
+  // echo $_SESSION["user_email"];
+  // echo $_SESSION['user_id'];
 }
 
 ?>
@@ -28,23 +28,29 @@ if(isset($_SESSION["user_email"])){
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Logo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-lg fixed-top" id="nav">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mr-4">
+                        <a class="nav-link text-white" href="user.php">Home</a>
+                    </li>
+                </ul>
+                <div class="btn-group me-3">
+    <img class="img-fluid rounded-circle" width="50" src="https://i.stack.imgur.com/YQu5k.png" data-bs-toggle="dropdown" aria-expanded="false" alt="avatar">
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="profile.php">profile</a></li>
+        <li><a class="dropdown-item" href="logout.php" name="logout">logout</a></li>
+    </ul>
     </div>
-    <div class="d-flex">
-      <a class="navbar-brand" href="#"><iconify-icon icon="mdi:user-circle-outline"></iconify-icon></a>
-      <a class="navbar-brand" href="#"><iconify-icon icon="mingcute:notification-line"></iconify-icon></a>
     </div>
-  </nav>
+        </div>
+    </nav>
   <?php require('profilinfo.php'); ?>
   <div class="container">
     <div class="addcard d-flex justify-content-center align-items-center"><button class="btn btn-warning mt-3 text-white" data-bs-target="#addModalL" data-bs-toggle="modal">add a new card <iconify-icon icon="material-symbols:add-circle" style="color: white;"></iconify-icon></button></div>
