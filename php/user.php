@@ -50,11 +50,11 @@ if (isset($_POST['searchbtn'])) {
         $pageId = 1;
     }
 
-    $endIndex = $pageId * 7;
-    $StartIndex = $endIndex - 7;
+    $endIndex = $pageId * 4;
+    $StartIndex = $endIndex - 4;
 
 
-    $announcesDATA = $conn->query("SELECT  a.*, i.image_path AS primary_image_path FROM advertisement a LEFT JOIN images_gallery i ON a.ad_id = i.ad_id AND i.primary_or_secondary = '1' LIMIT 7 OFFSET $StartIndex")->fetchAll(PDO::FETCH_ASSOC);
+    $announcesDATA = $conn->query("SELECT  a.*, i.image_path AS primary_image_path FROM advertisement a LEFT JOIN images_gallery i ON a.ad_id = i.ad_id AND i.primary_or_secondary = '1' LIMIT 4 OFFSET $StartIndex")->fetchAll(PDO::FETCH_ASSOC);
 
     $primaryImagePaths = array();
     foreach ($announcesDATA as $val) {
@@ -69,13 +69,13 @@ if (isset($_POST['searchbtn'])) {
 
     $pagesNum = 0;
 
-    if (($annoncesLength % 7) == 0) {
+    if (($annoncesLength % 4) == 0) {
 
-        $pagesNum = $annoncesLength / 7;
+        $pagesNum = $annoncesLength / 4;
 
     } else {
 
-        $pagesNum = ceil($annoncesLength / 7);
+        $pagesNum = ceil($annoncesLength / 4);
 
     }
 
@@ -89,7 +89,7 @@ if (isset($_POST['date_sort'])) {
     $sort_order = $_POST['date_order'];
 
     // SQL query to select cards and sort by specified field and order
-    $sql = "SELECT * FROM advertisement NATURAL JOIN `images_gallery` where primary_or_secondary = '1' ORDER BY $sort_field $sort_order LIMIT 7 OFFSET $StartIndex";
+    $sql = "SELECT * FROM advertisement NATURAL JOIN `images_gallery` where primary_or_secondary = '1' ORDER BY $sort_field $sort_order LIMIT 4 OFFSET $StartIndex";
     $stmt = $conn->query($sql);
     // Fetch the sorted cards
     $sorted = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -102,11 +102,11 @@ if (isset($_POST['date_sort'])) {
 
     $pagesNum = 0;
 
-    if (($annoncesLength % 7) == 0) {
+    if (($annoncesLength % 4) == 0) {
 
-        $pagesNum = $annoncesLength / 7;
+        $pagesNum = $annoncesLength / 4;
     } else {
-        $pagesNum = ceil($annoncesLength / 7);
+        $pagesNum = ceil($annoncesLength / 4);
     }
 }
 if (isset($_POST['price_sort'])) {
@@ -114,7 +114,7 @@ if (isset($_POST['price_sort'])) {
     $sort_order = $_POST['price_order'];
 
     // SQL query to select cards and sort by specified field and order
-    $sql = "SELECT * FROM advertisement NATURAL JOIN `images_gallery` where primary_or_secondary = '1' ORDER BY $sort_field $sort_order LIMIT 7 OFFSET $StartIndex";
+    $sql = "SELECT * FROM advertisement NATURAL JOIN `images_gallery` where primary_or_secondary = '1' ORDER BY $sort_field $sort_order LIMIT 4 OFFSET $StartIndex";
     $stmt = $conn->query($sql);
     // Fetch the sorted cards
     $sorted = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -127,11 +127,11 @@ if (isset($_POST['price_sort'])) {
 
     $pagesNum = 0;
 
-    if (($annoncesLength % 7) == 0) {
+    if (($annoncesLength % 4) == 0) {
 
-        $pagesNum = $annoncesLength / 7;
+        $pagesNum = $annoncesLength / 4;
     } else {
-        $pagesNum = ceil($annoncesLength / 7);
+        $pagesNum = ceil($annoncesLength / 4);
     }
 }
 ?>
